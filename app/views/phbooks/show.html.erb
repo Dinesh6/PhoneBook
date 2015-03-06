@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @phbook.name %>
+</p>
+
+<p>
+  <strong>Phone:</strong>
+  <%= @phbook.phone %>
+</p>
+
+<p>
+  <strong>Note:</strong>
+  <%= @phbook.note %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @phbook.User_id %>
+</p>
+<br>
+<%= link_to 'Edit', edit_phbook_path(@phbook) %> |
+<%= link_to 'Back', phbooks_path %>

@@ -1,0 +1,37 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Phbooks</h1>
+
+<table>
+  <thead>
+    <tr>
+	  <th>id</th>
+      <th>Name</th>
+      <th>Phone</th>
+      <th>Note</th>
+      <th>User_id</th>
+      <th colspan="4"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @phbooks.each do |phbook| %>
+      <tr>
+	    <td><%= phbook.id %></td>
+        <td><%= phbook.name %></td>
+        <td><%= phbook.phone %></td>
+        <td><%= phbook.note %></td>
+        <td><%= phbook.User_id %></td>
+        <td><%= link_to 'Show', phbook %></td>
+        <td><%= link_to 'Edit', edit_phbook_path(phbook) %></td>
+        <td><%= link_to 'Destroy', phbook, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Phbook', new_phbook_path %>
+<td><%= link_to 'goto User', users_path %></td>
+
